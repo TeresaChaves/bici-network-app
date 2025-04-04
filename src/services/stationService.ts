@@ -6,7 +6,8 @@ export interface Station {
   lat: number;
   lon: number;
   available_bikes: number;  
-  last_update: string;     
+  last_update: string;  
+  
 }
 
 export const fetchStations = async (networkId: string) => {

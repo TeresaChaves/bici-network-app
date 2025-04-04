@@ -5,7 +5,15 @@ export interface Network {
   id: string;
   name: string;
   company: string;
-  city: string;
+  location: {
+    city: string;
+    latitude: number;
+    longitude: number;
+    country: string;
+  };
+  href: string;
+
+
 }
 
 
