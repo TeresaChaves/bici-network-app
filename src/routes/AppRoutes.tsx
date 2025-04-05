@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 
-import StationContainer from "../containers/StationContainer";
-import StationList from "../components/StationList";
+import StationsPage from "../pages/StationsPage";
+import NetworksPage from "../pages/NetworksPage";
 
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<StationContainer />} />
-      <Route path="/stations/:networkId" element={<StationList />} />
+      <Route path="/" element={<NetworksPage />} />
+      <Route path="/stations/:networkId" element={<StationsPage/>} />
     </Routes>
   );
 }

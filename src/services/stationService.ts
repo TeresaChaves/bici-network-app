@@ -3,22 +3,26 @@
 export interface Station {
   id: string;
   name: string;
-  lat: number;
-  lon: number;
-  available_bikes: number;  
-  last_update: string;  
+  latitude: number;
+  longitude: number;
+  timestamp: string;
+  free_bikes: number;
+  empty_slots: number;
+
+  extra: {
+    uid: number;
+    normal_bikes: number;
+    ebikes: number;
+    slots: number;
+    online: boolean;
+  };
   
 }
 
 export const fetchStations = async (networkId: string) => {
-  const response = await fetch(`https://api.citybik.es//v2/networks/${networkId}`);
+  const response = await fetch(`https://api.citybik.es/v2/networks/${networkId}?fields=stations.name,stations.id,stations.timestamp,stations.free_bikes`);
   if (!response.ok) throw new Error("Error al obtener estaciones");
-  return response.json();
+  const data = await response.json();
+  return data.network.stations;
 };
 
-
-// export const fetchStationById = async (stationId: string): Promise<Station> => {
-//   const response = await fetch(`https://api.citybik.es/v2/stations/${stationId}`);
-//   if (!response.ok) throw new Error("No se pudo obtener la estación");
-//   return await response.json();
-// };

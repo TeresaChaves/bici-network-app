@@ -1,0 +1,38 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "spanish": "Español",
+    "english": "Inglés",
+    "back": "Volver a Inicio"
+  },
+  "stations": {
+    "empty": "No se encontraron estaciones",
+    "bikeLevels": {
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja",
+      "none": "No disponibles"
+    },
+    "time": {
+      "seconds": "segundos",
+      "minutes": "minutos",
+      "hours": "horas",
+      "days": "días",
+      "weeks": "semanas",
+      "months": "meses",
+      "years": "años"
+    },
+    "stations_of": "Estaciones de",
+    "date": "Fecha de actualización",
+    "availability": "Disponibilidad",
+
+    "location": "Localización",
+    "view_in_google_maps": "Ver en Google Maps"
+  },
+  "networks": {
+    "title": "Redes de bicicletas"
+  }
+}

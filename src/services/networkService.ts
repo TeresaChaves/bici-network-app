@@ -1,23 +1,23 @@
-import axios from 'axios';
 
 
 export interface Network {
-  id: string;
-  name: string;
   company: string;
+  href: string;
   location: {
-    city: string;
     latitude: number;
     longitude: number;
+    city: string;
     country: string;
   };
-  href: string;
-
-
+  name: string;
+  id: string;
 }
 
 
+
 export const fetchNetworks = async (): Promise<Network[]> => {
-  const response = await axios.get("https://api.citybik.es/v2/networks");
-  return response.data.networks; 
+  const response = await fetch(`https://api.citybik.es/v2/networks?fields=id,name,location.city,company`);;
+  const data = await response.json();
+  return data.networks;
 };
+

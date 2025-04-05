@@ -1,0 +1,38 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "spanish": "Spanish",
+    "english": "English",
+    "back": "Back to Home"
+  },
+  "stations": {
+    "empty": "No stations found",
+    "stations_of": "Stations of",
+
+    "bikeLevels": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "none": "No bikes available"
+    },
+    "time": {
+      "seconds": "seconds",
+      "minutes": "minutes",
+      "hours": "hours",
+      "days": "days",
+      "weeks": "weeks",
+      "months": "months",
+      "years": "years"
+    },
+
+    "availability": "Availability",
+    "date": "Date",
+    "location": "Location",
+    "view_in_google_maps": "View in Google Maps"
+  },
+
+  "networks": {
+    "title": "Bike Networks"
+  }
+}
