@@ -6,6 +6,7 @@ import { TfiReload } from "react-icons/tfi";
 import { SiGooglemaps } from "react-icons/si";
 import { TfiMapAlt } from "react-icons/tfi";
 import { CiNoWaitingSign } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
 interface StationDetailsPresenterProps {
   stations:   Station[];
@@ -69,19 +70,12 @@ const getAvailability = (station: Station) => {
     color: "text-gray-500",
     text: t("stations.availability") + ": " + availability
   };
-};
-
-
+  };
+  const navigate = useNavigate();
   
   return (
-   <div className="container mx-auto p-4">
-  <a
-    href="/"
-    className="inline-block bg-blue-500 text-white hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer text-center">
-    {t("common.back")}
-      </a>
-      
-
+    <div className="container mx-auto p-4">
+      <button  className="inline-block bg-blue-500 text-white hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer text-center" onClick={() => navigate(-1)}>{t("common.back")}</button>
     <h1 className="text-2xl font-bold text-center">
       {t("stations.stations_of")}{" "}
       <strong className="text-blue-500">{networkId?.toUpperCase()}</strong>

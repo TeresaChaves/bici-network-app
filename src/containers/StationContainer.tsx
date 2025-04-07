@@ -7,6 +7,7 @@ const StationContainer = () => {
   const { data: networks, isLoading, isError, error } = useQuery<Network[], Error>({
     queryKey: ['networks'],
     queryFn: fetchNetworks,
+      staleTime: 1000 * 60 * 5, 
   });
 
   const  { t } = useTranslation(); // Hook para acceder a las traducciones
